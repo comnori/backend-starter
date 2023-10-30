@@ -1,22 +1,11 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-  "name": "Ubuntu",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "name": "backend-starter",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "installGradle": true,
       "installMaven": true,
-      "version": "latest",
-      "jdkDistro": "ms",
-      "gradleVersion": "latest",
-      "mavenVersion": "latest",
-      "antVersion": "latest"
-    },
-    "ghcr.io/devcontainers-contrib/features/gradle-sdkman:2": {
-      "version": "latest",
-      "jdkVersion": "latest",
+      "version": "21",
       "jdkDistro": "ms"
     },
     "ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
@@ -24,17 +13,103 @@
       "jdkVersion": "latest",
       "jdkDistro": "ms"
     }
+  },
+  "postCreateCommand": {
+    "Change User shell": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
+    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions"
+  },
+  "portsAttributes": {
+    "8080": {
+      "label": "Application port"
+    },
+    "64120": {
+      "label": "SonarLint"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-gradle",
+        "vmware.vscode-boot-dev-pack",
+        "redhat.vscode-community-server-connector",
+        "MicroProfile-Community.vscode-microprofile-pack",
+        "shengchen.vscode-checkstyle",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml",
+        "vscjava.vscode-lombok",
+        "oderwat.indent-rainbow",
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens",
+        "PKief.material-icon-theme",
+        "EditorConfig.EditorConfig",
+        "aaron-bond.better-comments",
+        "liamhammett.inline-parameters",
+        "mhutchie.git-graph",
+        "SonarSource.sonarlint-vscode",
+        "usernamehw.errorlens",
+        "Huuums.vscode-fast-folder-structure",
+        "fabiospampinato.vscode-todo-plus",
+        "asciidoctor.asciidoctor-vscode",
+        "cmoog.sqlnotebook"
+      ],
+      "settings": {
+        "editor.codeActionsOnSave": {
+          "source.fixAll": true,
+          "source.organizeImports": true
+        },
+        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+        "java.format.settings.profile": "GoogleStyle",
+        "editor.foldingImportsByDefault": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "files.exclude": {
+          "**/.DS_Store": true,
+          "**/.git": true,
+          "**/.hg": true,
+          "**/.svn": true,
+          "**/CVS": true,
+          "**/Thumbs.db": true
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "todo.embedded.exclude": [
+          "**/*.html",
+          "**/*.map",
+          "**/*.min.*",
+          "**/*.{3ds,3g2,3gp,7z,a,aac,adp,ai,aif,aiff,alz,ape,apk,ar,arj,asf,au,avi,bak,baml,bh,bin,bk,bmp,btif,bz2,bzip2,cab,caf,cgm,class,cmx,cpio,cr2,csv,cur,dat,dcm,deb,dex,djvu,dll,dmg,dng,doc,docm,docx,dot,dotm,dra,DS_Store,dsk,dts,dtshd,dvb,dwg,dxf,ecelp4800,ecelp7470,ecelp9600,egg,eol,eot,epub,exe,f4v,fbs,fh,fla,flac,fli,flv,fpx,fst,fvt,g3,gif,graffle,gz,gzip,h261,h263,h264,icns,ico,ief,img,ipa,iso,jar,jpeg,jpg,jpgv,jpm,jxr,key,ktx,lha,lib,lvp,lz,lzh,lzma,lzo,m3u,m4a,m4v,mar,mdi,mht,mid,midi,mj2,mka,mkv,mmr,mng,mobi,mov,movie,mp3,mp4,mp4a,mpeg,mpg,mpga,mxu,nef,npx,numbers,o,oga,ogg,ogv,otf,pages,pbm,pcx,pdb,pdf,pea,pgm,pic,png,pnm,pot,potm,potx,ppa,ppam,ppm,pps,ppsm,ppsx,ppt,pptm,pptx,psd,pya,pyc,pyo,pyv,qt,rar,ras,raw,resources,rgb,rip,rlc,rmf,rmvb,rtf,rz,s3m,s7z,scpt,sgi,shar,sil,sketch,slk,smv,so,sub,swf,tar,tbz,tbz2,tga,tgz,thmx,tif,tiff,tlz,ttc,ttf,txz,udf,uvh,uvi,uvm,uvp,uvs,uvu,viv,vob,war,wav,wax,wbmp,wdp,weba,webm,webp,whl,wim,wm,wma,wmv,wmx,woff,woff2,wvx,xbm,xif,xla,xlam,xls,xlsb,xlsm,xlsx,xlt,xltm,xltx,xm,xmind,xpi,xpm,xwd,xz,z,zip,zipx}",
+          "**/.*",
+          "**/.*/**",
+          "**/_output/**",
+          "**/bower_components/**",
+          "**/build/**",
+          "**/CHANGELOG",
+          "**/CHANGELOG.*",
+          "**/dist/**",
+          "**/node_modules/**",
+          "**/out/**",
+          "**/output/**",
+          "**/release/**",
+          "**/releases/**",
+          "**/static/**",
+          "**/target/**",
+          "**/third_party/**",
+          "**/vendor/**",
+          "**/venv/**"
+        ],
+        "sonarlint.disableTelemetry": true,
+        "gitlens.telemetry.enabled": false,
+        "vsintellicode.typescript.completionsEnabled": false,
+        "intellicodeApiExamples.typescript.enabled": false,
+        "java.checkstyle.configuration": "/google_checks.xml",
+        "java.checkstyle.version": "10.12.4"
+      }
+    }
   }
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
-
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "uname -a",
-
   // Configure tool-specific properties.
   // "customizations": {},
-
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
 }
