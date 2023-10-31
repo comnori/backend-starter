@@ -16,7 +16,7 @@
   },
   "postCreateCommand": {
     "Change User shell": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
-    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions"
+    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions -p gradle"
   },
   "portsAttributes": {
     "8080": {
@@ -33,7 +33,6 @@
         "vscjava.vscode-gradle",
         "vmware.vscode-boot-dev-pack",
         "redhat.vscode-community-server-connector",
-        "MicroProfile-Community.vscode-microprofile-pack",
         "shengchen.vscode-checkstyle",
         "redhat.vscode-xml",
         "redhat.vscode-yaml",
@@ -69,7 +68,11 @@
           "**/.hg": true,
           "**/.svn": true,
           "**/CVS": true,
-          "**/Thumbs.db": true
+          "**/Thumbs.db": true,
+          "**/.gradle": true,
+          "**/bin": true,
+          "gradlew": true,
+          "gradlew.bat": true
         },
         "terminal.integrated.defaultProfile.linux": "zsh",
         "todo.embedded.exclude": [
