@@ -50,7 +50,9 @@
         "Huuums.vscode-fast-folder-structure",
         "fabiospampinato.vscode-todo-plus",
         "asciidoctor.asciidoctor-vscode",
-        "cmoog.sqlnotebook"
+        "cmoog.sqlnotebook",
+        "ithildir.java-properties",
+        "IBM.output-colorizer"
       ],
       "settings": {
         "editor.codeActionsOnSave": {
@@ -108,11 +110,4 @@
       }
     }
   }
-  // "forwardPorts": [],
-  // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "uname -a",
-  // Configure tool-specific properties.
-  // "customizations": {},
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
 }
