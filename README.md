@@ -83,6 +83,11 @@
 
 ### etc
 
+## Troubleshooting
+
+[WSL 2 consumes massive amounts of RAM and doesn't return](https://github.com/microsoft/WSL/issues/4166)
+- [wslconfig](https://devblogs.microsoft.com/commandline/windows-subsystem-for-linux-september-2023-update/#automatic-memory-reclaim)
+
 ## Reference
 
 - [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers)

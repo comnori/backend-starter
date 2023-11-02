@@ -26,6 +26,9 @@
       "label": "SonarLint"
     }
   },
+  "containerUser": "vscode",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/home/vscode/workspace",
   "customizations": {
     "vscode": {
       "extensions": [
