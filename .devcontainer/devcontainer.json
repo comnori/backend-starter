@@ -5,7 +5,7 @@
     "ghcr.io/devcontainers/features/java:1": {
       "installGradle": true,
       "installMaven": true,
-      "version": "21",
+      "version": "17",
       "jdkDistro": "ms"
     },
     "ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
@@ -15,7 +15,8 @@
     }
   },
   "postCreateCommand": {
-    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions -p gradle"
+    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions -p gradle -p sdk",
+    "SDK env install": "echo \"sdkman_auto_env=true\" >> /usr/local/sdkman/etc/config"
   },
   "portsAttributes": {
     "8080": {
@@ -37,7 +38,7 @@
         "redhat.vscode-yaml",
         "vscjava.vscode-lombok",
         "oderwat.indent-rainbow",
-        "streetsidesoftware.code-spell-checker",
+        // "streetsidesoftware.code-spell-checker",
         "eamodio.gitlens",
         "PKief.material-icon-theme",
         "EditorConfig.EditorConfig",
@@ -54,15 +55,38 @@
         "IBM.output-colorizer"
       ],
       "settings": {
+        // Editor
         "editor.codeActionsOnSave": {
           "source.fixAll": true,
           "source.organizeImports": true
         },
-        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-        "java.format.settings.profile": "GoogleStyle",
         "editor.foldingImportsByDefault": true,
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
+        // JAVA
+        "java.checkstyle.configuration": "/google_checks.xml",
+        "java.checkstyle.version": "10.12.4",
+        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+        "java.format.settings.profile": "GoogleStyle",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/17.0.9-ms",
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-17",
+            "path": "/usr/local/sdkman/candidates/java/17.0.9-ms",
+            "default": true
+          }
+        ],
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.configuration.updateBuildConfiguration": "interactive",
+        "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable",
+        // Telemetry
+        "sonarlint.disableTelemetry": true,
+        "gitlens.telemetry.enabled": false,
+        "redhat.telemetry.enabled": false,
+        // ETC
+        "vsintellicode.typescript.completionsEnabled": false,
+        "intellicodeApiExamples.typescript.enabled": false,
         "files.exclude": {
           "**/.DS_Store": true,
           "**/.git": true,
@@ -99,13 +123,7 @@
           "**/third_party/**",
           "**/vendor/**",
           "**/venv/**"
-        ],
-        "sonarlint.disableTelemetry": true,
-        "gitlens.telemetry.enabled": false,
-        "vsintellicode.typescript.completionsEnabled": false,
-        "intellicodeApiExamples.typescript.enabled": false,
-        "java.checkstyle.configuration": "/google_checks.xml",
-        "java.checkstyle.version": "10.12.4"
+        ]
       }
     }
   }
