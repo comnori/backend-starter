@@ -15,7 +15,6 @@
     }
   },
   "postCreateCommand": {
-    "Change User shell": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
     "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions -p gradle"
   },
   "portsAttributes": {
