@@ -1,5 +1,5 @@
 {
-  "name": "backend-starter",
+  "name": "spring-starter",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
@@ -7,16 +7,10 @@
       "installMaven": true,
       "version": "17",
       "jdkDistro": "ms"
-    },
-    "ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
-      "version": "latest",
-      "jdkVersion": "latest",
-      "jdkDistro": "ms"
     }
   },
   "postCreateCommand": {
-    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions -p gradle -p sdk",
-    "SDK env install": "echo \"sdkman_auto_env=true\" >> /usr/local/sdkman/etc/config"
+    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions -p gradle -p sdk"
   },
   "portsAttributes": {
     "8080": {
@@ -55,7 +49,8 @@
         "asciidoctor.asciidoctor-vscode",
         "cmoog.sqlnotebook",
         "ithildir.java-properties",
-        "IBM.output-colorizer"
+        "IBM.output-colorizer",
+        "mutantdino.resourcemonitor"
       ],
       "settings": {
         // Editor
@@ -72,17 +67,8 @@
         "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
         "java.format.settings.profile": "GoogleStyle",
         "java.compile.nullAnalysis.mode": "automatic",
-        "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/17.0.9-ms",
-        "java.configuration.runtimes": [
-          {
-            "name": "JavaSE-17",
-            "path": "/usr/local/sdkman/candidates/java/17.0.9-ms",
-            "default": true
-          }
-        ],
-        "java.compile.nullAnalysis.mode": "automatic",
-        "java.configuration.updateBuildConfiguration": "interactive",
-        "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable",
+        //Lint
+        "sonarlint.analysisExcludesStandalone": "**/*.yaml",
         // Telemetry
         "sonarlint.disableTelemetry": true,
         "gitlens.telemetry.enabled": false,
