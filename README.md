@@ -23,9 +23,9 @@
 
 ## Getting start
 
-1. git checkout
+1. git clone
 ```shell
-> git check --depth 1 https://github.com/comnori/backend-starter.git
+> git clone --depth 1 https://github.com/comnori/backend-starter.git
 ```
 2. change name in `devcontainer.json`
 3. Constructed with [reference](#reference) to reference materials
@@ -37,6 +37,8 @@
 - Features
   - Microsoft JDK 21
   - oh-my-zsh
+  - NodeJS 20 LTS
+    - For SonarLint
 
 ### VS Code
 
@@ -81,7 +83,6 @@
 |formatOnSave|true|
 |source.fixAll|true|
 |source.organizeImports|true|
-|defaultFormatter|prettier|
 
 ### etc
 
