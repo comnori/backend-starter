@@ -2,7 +2,7 @@
 
 ## Java Edition
 
-`devcontainer`의 Template과 Features 그리고 `GitHub`의 Template을 사용하여 Frontend 개발을 빠르게 시작할 수 있습니다.
+`devcontainer`의 Template과 Features 그리고 `GitHub`의 Template을 사용하여 Java Backend 개발을 빠르게 시작할 수 있습니다.
 
 인력 및 장비의 추가 및 장비 또는 운영체제의 변경 등 개발 환경을 구성해야 할 때 번거로움을 해결할 수 있습니다. 또한, 개발 환경의 변경 이력의 추적이 가능합니다.
 
@@ -23,11 +23,13 @@
 
 ## Getting start
 
+1. git checkout
 ```shell
-> git clone --depth 1 https://github.com/comnori/backend-starter.git
+> git check --depth 1 https://github.com/comnori/backend-starter.git
 ```
-
-![dev-containers-reopen](https://code.visualstudio.com/assets/docs/devcontainers/create-dev-container/dev-containers-reopen.png)
+2. change name in `devcontainer.json`
+3. Constructed with [reference](#reference) to reference materials
+4. devconatiner build
 
 ## Customizations
 
@@ -65,7 +67,7 @@
   - Analysis
     - [SonarLint](vscode:extension/SonarSource.sonarlint-vscode)
   - Todo
-    - [Todo+](vscode:extension/fabiospampinato.vscode-todo-plus)
+    - [Todo Tree](vscode:extension/Gruntfuggly.todo-tree)
   - File format
     - [EditorConfig](vscode:extension/EditorConfig.EditorConfig)
   - Template

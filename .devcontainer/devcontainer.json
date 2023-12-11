@@ -1,12 +1,15 @@
 {
-  "name": "spring-starter",
+  "name": "backend-starter",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "installGradle": true,
       "installMaven": true,
-      "version": "17",
+      "version": "21",
       "jdkDistro": "ms"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
     }
   },
   "postCreateCommand": {
@@ -45,7 +48,7 @@
         "SonarSource.sonarlint-vscode",
         "usernamehw.errorlens",
         "Huuums.vscode-fast-folder-structure",
-        "fabiospampinato.vscode-todo-plus",
+        "Gruntfuggly.todo-tree",
         "asciidoctor.asciidoctor-vscode",
         "cmoog.sqlnotebook",
         "ithildir.java-properties",
