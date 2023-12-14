@@ -44,36 +44,8 @@
 
 #### Extensions
 
-- Requirments
-  - Java
-    - [Extension Pack for Java](vscode:extension/vscjava.vscode-java-pack)
-    - [Gradle for Java](vscode:extension/vscjava.vscode-gradle)
-    - [Spring Boot Extension Pack](vscode:extension/vmware.vscode-boot-dev-pack)
-    - [Lombok Annotations Support for VS Code](vscode:extension/vscjava.vscode-lombok)
-    - [Community Server Connectors](vscode:extension/redhat.vscode-community-server-connector)
-    - [Checkstyle for Java](vscode:extension/shengchen.vscode-checkstyle)
-    - [XML](vscode:extension/redhat.vscode-xml)
-    - [YAML](vscode:extension/redhat.vscode-yaml)
-    - [SQL Notebook](vscode:extension/cmoog.sqlnotebook)
-  - Git
-    - [GitLens](vscode:extension/eamodio.gitlens)
-    - [git-graph](vscode:extension/mhutchie.git-graph)
-  - Appearance
-    - [One Dark Pro](vscode:extension/zhuangtongfa.material-theme)
-    - [Material Icon Theme](vscode:extension/PKief.material-icon-theme)
-    - [indent-rainbow](vscode:extension/oderwat.indent-rainbow)
-    - [Better Comments](vscode:extension/aaron-bond.better-comments)
-  - Code Assist
-    - [Inline Parameters for VSCode](vscode:extension/liamhammett.inline-parameters)
-    - [Error Lens](vscode:extension/usernamehw.errorlens)
-  - Analysis
-    - [SonarLint](vscode:extension/SonarSource.sonarlint-vscode)
-  - Todo
-    - [Todo Tree](vscode:extension/Gruntfuggly.todo-tree)
-  - File format
-    - [EditorConfig](vscode:extension/EditorConfig.EditorConfig)
-  - Template
-    - [Folder Templates](vscode:extension/Huuums.vscode-fast-folder-structure)
+- [Java + Spring AWESOME-SOHO Extension Pack](https://marketplace.visualstudio.com/items?itemName=comnori.java-spring-awesome-soho-extension-pack)
+
 
 #### Settings
 
