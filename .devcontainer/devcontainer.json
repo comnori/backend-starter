@@ -13,7 +13,7 @@
     }
   },
   "postCreateCommand": {
-    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions -p gradle -p sdk"
+    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh"
   },
   "portsAttributes": {
     "8080": {
