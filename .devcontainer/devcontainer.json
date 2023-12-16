@@ -39,6 +39,7 @@
         },
         "editor.foldingImportsByDefault": true,
         "editor.fontFamily": "'D2Coding', Consolas, 'Courier New', monospace",
+        "editor.fontLigatures": true,
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
         // JAVA
