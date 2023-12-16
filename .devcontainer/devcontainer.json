@@ -29,31 +29,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "vscjava.vscode-java-pack",
-        "vscjava.vscode-gradle",
-        "vmware.vscode-boot-dev-pack",
-        "redhat.vscode-community-server-connector",
-        "shengchen.vscode-checkstyle",
-        "redhat.vscode-xml",
-        "redhat.vscode-yaml",
-        "vscjava.vscode-lombok",
-        "oderwat.indent-rainbow",
-        // "streetsidesoftware.code-spell-checker",
-        "eamodio.gitlens",
-        "PKief.material-icon-theme",
-        "EditorConfig.EditorConfig",
-        "aaron-bond.better-comments",
-        "liamhammett.inline-parameters",
-        "mhutchie.git-graph",
-        "SonarSource.sonarlint-vscode",
-        "usernamehw.errorlens",
-        "Huuums.vscode-fast-folder-structure",
-        "Gruntfuggly.todo-tree",
-        "asciidoctor.asciidoctor-vscode",
-        "cmoog.sqlnotebook",
-        "ithildir.java-properties",
-        "IBM.output-colorizer",
-        "mutantdino.resourcemonitor"
+        "comnori.java-spring-awesome-soho-extension-pack"
       ],
       "settings": {
         // Editor
