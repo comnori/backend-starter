@@ -13,7 +13,8 @@
     }
   },
   "postCreateCommand": {
-    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh"
+    "preInit": "chmod +x ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
+    "Init": "${containerWorkspaceFolder}/.devcontainer/scripts/init.sh > init.log"
   },
   "portsAttributes": {
     "8080": {
